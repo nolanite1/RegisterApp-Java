@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-	// TODO: Anything you want to do when the page is loaded?
-	console.log("hello");
+	
 });
 
 function validateForm() {
-	// TODO: Validate the user input
+	//Validate the user input
 	var name = document.getElementById("name").value;
 	var password = document.getElementById("pwd").value;
 	var nameReg = /[0-9]/g;
 	var found = name.match(nameReg);
-	if(name != ""|| password != ""){
-		if(found.length < name.length){
-			alert("Invalid Employee ID!");
+	//Check if empty username and password
+	if(name != "" && password != ""){ 			// IF NOT EMPTY
+		if(found.length < name.length){			  // Check if username has letters
+			//Invalid username
+			alert("Invalid Username!");
 			return false;
 		}
-		return true;
+			//Valid username and password
+			return true;
 	}
-	alert("Employee ID or Password is empty!");
+	//Empty username or password
+	alert("Empty Username or Password!");
 	return false;
 }
