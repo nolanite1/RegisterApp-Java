@@ -11,8 +11,12 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.uark.registerapp.controllers.enums.ViewNames;
 
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = "/signIn")
 public class SignInRouteController extends BaseRouteController {
+	@RequestMapping(method=RequestMethod.GET)
+	public String index(){
+		return "Hello World";
+	}
 	// TODO: Route for initial page load
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
