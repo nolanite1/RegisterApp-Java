@@ -14,7 +14,7 @@ import edu.uark.registerapp.controllers.enums.ViewNames;
 @RequestMapping(value = "/signIn")
 public class SignInRouteController extends BaseRouteController {
 	@RequestMapping(value="")
-	public String index(){
+	public String start(){
 		return "Hello World";
 	}
 	// TODO: Route for initial page load
