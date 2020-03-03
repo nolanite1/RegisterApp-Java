@@ -13,7 +13,7 @@ import edu.uark.registerapp.controllers.enums.ViewNames;
 @Controller
 @RequestMapping(value = "/signIn")
 public class SignInRouteController extends BaseRouteController {
-	@RequestMapping(method=RequestMethod.GET,value="/")
+	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView start(){
 		return new ModelAndView("signIn");
 	}
